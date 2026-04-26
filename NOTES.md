@@ -13,6 +13,8 @@ git push
 ---
 
 ## Python Commands
+source venv/bin/activate
+deactivate
 pip install pandas
 pip install yfinance
 
