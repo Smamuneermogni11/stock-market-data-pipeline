@@ -1,0 +1,6 @@
+import yfinance as yf
+vix = yf.download("^VIX", period="2y")
+qqq = yf.download("QQQ", period="2y")
+vix.to_csv("/Users/mohammadabdulmuneermognishaik/Documents/Projects/stock-market-data-pipeline/data/raw/VIX.csv")
+qqq.to_csv("/Users/mohammadabdulmuneermognishaik/Documents/Projects/stock-market-data-pipeline/data/raw/QQQ.csv")
+print("Sentiment data saved")

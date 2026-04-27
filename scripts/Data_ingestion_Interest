@@ -1,0 +1,11 @@
+import pandas as pd
+import os
+from datetime import datetime, timedelta
+url = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=FEDFUNDS"
+df = pd.read_csv(url)
+df.columns = ["Date", "InterestRate"]
+df["Date"] = pd.to_datetime(df["Date"])
+df = df[(df["Date"] >= "2024-01-01") & (df["Date"] <= "2026-01-01")]
+file_path = "data/raw/FEDFUNDS_2Y.csv"
+df.to_csv(file_path, index=False)
+print("Saved interest rate data to:", file_path)

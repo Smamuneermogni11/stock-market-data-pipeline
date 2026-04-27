@@ -3,3 +3,4 @@ yfinance
 numpy
 matplotlib
 seaborn
+pandas_datareader
